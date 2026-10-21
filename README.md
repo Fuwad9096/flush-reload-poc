@@ -17,7 +17,7 @@ The attack works in three steps:
 If the reload is **fast** (cache hit), the victim accessed that memory during the wait window.  
 If the reload is **slow** (cache miss), the victim did not.
 
-The prerequisite is **shared physical memory** between spy and victim. This PoC achieves that by having both processes `mmap()` the same file — since neither process writes to it, the OS maps both to the same physical page-cache page.
+The prerequisite is **shared physical memory** between spy and victim. This PoC achieves that by having both processes `mmap()` the same file since neither process writes to it, the OS maps both to the same physical page-cache page.
 
 ---
 
