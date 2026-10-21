@@ -63,12 +63,7 @@ Run spy and victim on the **same** file in separate terminals:
 
 Expected output: spy detects victim's accesses roughly matching victim's 1-second sleep cadence:
 
-```
-LLC miss threshold: 327
-Victim has accessed target file..
-Victim has accessed target file..
-Victim has accessed target file..
-```
+![Same file detection](assets/sam-file-detection.png)
 
 ### Different files (negative control)
 
@@ -84,9 +79,7 @@ Run spy and victim on **different** files:
 
 Expected output: spy produces complete silence after the threshold line:
 
-```
-LLC miss threshold: 326
-```
+![Same file detection](assets/different-silent.png)
 
 No false positives. This confirms the detection is tied to actual shared physical page access, not noise.
 
